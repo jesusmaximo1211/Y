@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color: #fff;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*---------------HEADER-----------------*/
+.header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.9rem;
+
+}
+.title{
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: .8em;
+}
+.title a{
+    margin: 0;
+}
+.material-symbols-outlined{
+    font-size: 3rem;
+    margin-right: .8em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+@media screen and (max-width:500px){
+    .header{
+        font-size: 1.3rem;
+    }
+    .material-symbols-outlined{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+/*---------------MAIN-----------------*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*FIRST VIEW*/
+.first_view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-wrap: pretty;
+    text-align: center;
+    height: 100dvh;
+    background-image: url("img/aeroglobes.jpg");
+    background-size:cover;
+    background-position: center;
+}
+.text-contain{
+    width: 70%;
+}
+h1 {
+    font-size: 4.5rem;
+}
+.first_view p{
+    font-size: 1.3rem;
+}
+.more {
+    margin: 30px;
+}
+.more a{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    color: #04947d;
+    padding: 13px 25px;
+}
+.more a:hover{
+    background-color: #04947d;
+    color: #f4f4f4;
+}
+
+@media screen and (max-width:540px){
+    h1{
+        font-size: 3rem;
+    }
+    .first_view p {
+        font-size: 1rem;
+    }
+    .more a{
+        padding: 10px,20px;
+    }
+}
+
+/*separador*/
+.separador{
+    display: block;
+    width: 100%;
+    height: 10dvh;
+    background-color: #64af99;
+    position: absolute;
+    z-index: 20;
+    filter: blur(10px);
+    top:100dvh;
+    box-shadow: 0 0 70px 10px #64af99;
+}
+/*SECOND VIEW*/
+.second_view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #64af99;
+    height: 110dvh;
+    z-index: 1;
+    box-shadow: 0 0 50px 20px #2d4e44;
+}
+
+.second_view-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: end;
+    text-wrap: pretty;
+}
+.second_view-description h2{
+    font-size: 3rem;
+}
+.second_view-description p{
+    font-size: 1.2rem;
+}
+.second_view-description a{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    color: #04947d;
+    font-size: 1.2rem;
+    padding: 13px 25px;
+}
+.second_view-description a:hover{
+    background-color:#04947d ;
+    border-radius: 10px;
+    color: #f4f4f4;
+}
+.second_view img{
+    width: 50px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 0 #097b68;
+}
+@media screen and (max-width:540px){
+    .second_view-description h2 {
+        font-size:1.7rem ;
+    }
+    .second_view-description a, .second_view-description p{
+        font-size: .9rem;
+    }
+}
+
+/*THIRD VIEW*/
+.third_view{
+    width: 100%;
+    height: 100dvh;
+    background-image: url("img/cascada.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: -2;
+    align-items: center;
+}
+
+
+/*FOURTH VIEW */
+.fourth_view{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fourth_view a{
+    color: #000;
+    background-color: #fff;
+}
+.fourth_view a:hover{
+    background-color: #777;
+}
+.fourth_view-info{
+    text-align: center;
+    width: 70%;
+}
+.destinations{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.filtro{
+    background-color: #00000086;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 450px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.cards img{
+    width: 300px;
+    height: 350px;
+    border-radius: 20px 20px 0 0;
+}
+.colombia,.brazil,.chile{
+    background-color: #333;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+}
+.colombia:hover, .brazil:hover, .chile:hover{
+    opacity: 1;
+}
+.cards:hover .colombia,
+.cards:hover .brazil,
+.cards:hover .chile{
+    opacity: 0.3;
+}
+.cards .colombia:hover,
+.cards .brazil:hover,
+.cards .chile:hover{
+    opacity: 1;
+}
+
+/*FOOTER*/
+
+.footer{
+    color: #000;
+    width: 100%;
+    height: 100dvh;
+    background-image: url("img/argentina.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.redes{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.redes li {
+    padding: 15px;
+}
+.redes li img{
+    width: 2.2rem;
+}
+.redes li .instagram img {
+    width: 3rem;
+}
+.copyright{
+    font-size: 1.3rem;
+    text-wrap: balance;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+
+
+
+@media screen and (max-width:1000px){
+    .separador{
+        width: 100dvw;
+        height: 5dvh;
+        box-shadow: 0 0 50px 0px #64af99;
+    }
+    .second_view{
+        height: 110dvh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .second_view-description{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70%;
+    }
+    .second_view img{
+        width: 80%;
+        border-radius: 20px;
+        box-shadow: 0 0 2px 0 #097b68;
+    }
+}
